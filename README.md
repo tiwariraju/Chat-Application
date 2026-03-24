@@ -2,7 +2,7 @@
 
 Full-stack chat application built with Spring Boot, MySQL, JWT authentication, and WebSocket STOMP.
 
-## 1) What I am using
+## 1. What I am using
 
 ### Backend
 - Java 17
@@ -20,7 +20,7 @@ Full-stack chat application built with Spring Boot, MySQL, JWT authentication, a
 - SockJS + STOMP client (WebSocket connection)
 - `localStorage` (store JWT token and username)
 
-## 2) How this project works
+## 2. How this project works
 
 ### Authentication flow
 1. User signs up from `signup.html` (`POST /api/auth/signup`).
@@ -44,7 +44,7 @@ Full-stack chat application built with Spring Boot, MySQL, JWT authentication, a
 6. Active users list is pushed on `/topic/users`.
 7. Join/leave events are shown as notifications in chat UI.
 
-## 3) Main features
+## 3. Main features
 
 - Login and Signup pages
 - Secure JWT-based authentication
@@ -55,7 +55,7 @@ Full-stack chat application built with Spring Boot, MySQL, JWT authentication, a
 - Join/Leave notifications
 - Redirect to login when token is missing/invalid
 
-## 4) Project structure
+## 4. Project structure
 
 ```text
 chat_Application/
@@ -81,7 +81,7 @@ chat_Application/
 |- pom.xml
 ```
 
-## 5) API endpoints
+## 5. API endpoints
 
 ### Auth APIs
 - `POST /api/auth/signup`
@@ -91,7 +91,7 @@ chat_Application/
 - `GET /api/chat/active-users` (JWT required)
 - `GET /api/chat/health`
 
-## 6) WebSocket/STOMP endpoints
+## 6. WebSocket/STOMP endpoints
 
 - WebSocket endpoint: `/ws`
 - Application prefix: `/app`
@@ -101,7 +101,7 @@ chat_Application/
   - `/topic/public` (messages + join/leave events)
   - `/topic/users` (active users)
 
-## 7) Database schema (MySQL)
+## 7. Database schema (MySQL)
 
 Use file: `database/schema.sql`
 
@@ -113,7 +113,7 @@ Main table:
   - `password` (hashed)
   - `created_at`
 
-## 8) Setup and run (step by step)
+## 8. Setup and run (step by step)
 
 1. Install:
    - Java 17+
@@ -146,10 +146,13 @@ Main table:
    - Create account -> login -> open chat room
    - Open in second browser/user and verify real-time messages
 
-## 9) Production notes
+## 9. Production notes
 
 - Move JWT secret to environment variable
 - Restrict CORS to trusted frontend domain
 - Use HTTPS in production
 - Add refresh-token flow
 - Use external message broker for scaling (RabbitMQ/Redis)
+=======
+# Chat-Application
+>>>>>>> 605b07801ca016bb706afdecffd5c175e5a2eb75
