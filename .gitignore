@@ -1,0 +1,13 @@
+# Maven
+.m2/
+.m2repo/
+
+# Build
+target/
+
+# IDE
+.idea/
+*.iml
+
+# OS
+.DS_Store
